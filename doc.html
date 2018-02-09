@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<!-- Zkontrolujte prosím nastavení kódování v hlavičce dokumentu 
+     podle použitého editoru -->
+
+<h1>PiratIS</h1> <!-- Nahradte názvem svého zadání -->
+
+<dl>
+	<dt>Autoři</dt>
+	<dd>Martin Ivančo <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xivanc03@stud.fit.vutbr.cz">xivanc03@stud.fit.vutbr.cz</a> - 
+		vzhled (html/css), databáze
+	</dd>
+	<dd>Vladimír Jeřábek <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xjerab21@stud.fit.vutbr.cz">xjerab21@stud.fit.vutbr.cz</a> -
+	    php skripty
+	</dd>
+	    
+	<dt>URL aplikace</dt>
+	<dd><a href="http://www.stud.fit.vutbr.cz/~xjerab21/">http://www.stud.fit.vutbr.cz/~xjerab21/</a></dd>
+</dl>
+
+<h2>Uživatelé systému pro testování</h2>
+<table>
+<tr><th>Login</th><th>Heslo</th><th>Role</th></tr>
+<tr><td>0</td><td>admin</td><td>Administrátor</td></tr>
+<tr><td>11</td><td>pswd11</td><td>Kapitán</td></tr>
+<tr><td>18</td><td>pswd18</td><td>Běžný pirát</td></tr>
+</table>
+
+<h2>Implementace</h2>
+<ul>
+<li><b>index.php</b> -> skript pro spuštěnní a obsahuje přihlašování do<systému/li>
+<li><b>main.php (printMain.php)</b> -> skript, který vypisuje záklatní informace ohledně vybrané položky</li>
+<li><b>details.php (printDetails.php)</b> -> skript pro vypsání detailních informací ohledně konkrétní položky</li>
+<li><b>add.php (printForms.php)</b> -> skript< který obsahuje jednotlivé formuláře pro přidávání daných jednotek do systému </li>
+<li><b>edit.php (editForms.php)</b> -> skript, který se stará o validní editaci prvků v databázi</li>
+<li><b>delete.php</b> -> skript pro odebrání piráta ze systému</li>
+<li><b>db_init.php</b> -> skript pro s/nicializaciadatabáze, a taktéž obsahlje významné funkce pracujícíis databází </li>
+<li><b>menu.php</b> -> skript  pro vykreslení vrchnv lišty</li>
+<li><b>settings.php (setPassword.php)</b> -> skript pro změnu hesla</li>
+<li><b>siteboxesphp</b> -> skript , který vykresluje různé filtry a způsoby řazení v základních informacích (main.php)</li>
+</ul>
+<p></p>
+
+<h2>Instalace</h2>
+<ul>
+<li>Zkopírujte <b>všechny</b> soubory systému na server</li>
+<li>Server musí podporovat <b>PHP5</b> a <b>MySQL5</b></li>
+<li>Nainicializujte databázi pomocí skriptu <b>init_db.sql</b></li>
+<li>Spusťte systém skriptem <b>index.html</b></li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>
+V našem systému není podporována možnost vytváření aliancí.
+Toto však nijak neubíra na hlavní funkcionalite systému.<br><br>
+Komě toho není možné odstranit ani změnit kapitána posádky.
+Toto rozhodnutí jsme učinili z toho důvodu, že systém slouží také jako archiv již zaniklých posádek a zemřelých pirátů.
+Kdyby byl kapitán odstraněn, musel by být zvolen nový a tím by se všechny jeho dosavadní činnosti v posádce anulovali.<br><br>
+Ostatní funkcionalita však byla ponechána a implementována dle navrženého use-case diagramu.
+</p>
+
+</body>
+</html>
